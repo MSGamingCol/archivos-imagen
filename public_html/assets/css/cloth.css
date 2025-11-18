@@ -1,0 +1,95 @@
+#cloth {
+    background-image: url("../imgs/cloth/fondo.jpg"); /* RUTA CORRECTA */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Overlay oscuro encima de la imagen */
+#cloth::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+}
+
+/* Asegurar que el contenido quede encima del overlay */
+#cloth > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Desactivar parallax en móviles */
+@media (max-width: 991px) {
+    #cloth {
+        background-attachment: scroll !important;
+    }
+}
+/* Contenedor principal de la sección Clothing */
+.clothing-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Título */
+.clothing-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* CONTENEDOR DE BOTONES */
+.clothing-buttons {
+    display: flex;
+    justify-content: center; /* <--- CENTRA EN DESKTOP */
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Estilos de los botones */
+.clothing-btn {
+    padding: 12px 24px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.clothing-btn:hover {
+    background: #444;
+}
+
+/* === CONTENEDOR DE IMAGEN === */
+.clothing-image-container {
+    display: flex;
+    justify-content: center; /* <--- CENTRA LA IMAGEN EN DESKTOP */
+    align-items: center;
+}
+
+/* Imagen mostrada */
+.clothing-image {
+    width: 320px;
+    max-width: 90vw; /* asegura buena visual en móvil */
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* Clase activa cuando se muestra la imagen */
+.clothing-image.active {
+    opacity: 1;
+    transform: scale(1.15); /* <--- AGRANDA LA IMAGEN */
+}
+
+/* Versión móvil: todo ya viene centrado */
+@media (max-width: 768px) {
+    .clothing-btn {
+        width: 90%;
+    }
+}
+

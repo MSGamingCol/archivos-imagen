@@ -665,7 +665,11 @@ section[id] {
   visibility: visible;
   transition: all 0.2s linear;
 }
-
+.custom-navbar .navbar-brand .brand-img {
+    max-width: 110px !important; /* Ajusta si necesitas */
+    width: auto !important;
+    height: auto !important;
+}
 
 
 /* Reglas antiguas de .affix (dejamos solo lo necesario) */
@@ -704,7 +708,7 @@ section[id] {
   .logo-scroll {
       opacity: 0;
       visibility: hidden;
-      width: 100%;
+      width: 70%;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -748,56 +752,65 @@ section[id] {
     display: none !important;
   }
 
-  /* Eliminar espacio vertical del contenedor del logo en móvil */
+  /* No colapsar el brand: simplemente ocultarlo */
   .navbar-collapse .navbar-brand {
-    height: 0 !important;
-    min-height: 0 !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-    overflow: hidden !important;
+    display: none !important;
   }
 
-  /* Empujar menú hacia abajo según tamaño del logo hamburguesa */
+  /* Empujar el menú hacia abajo según tamaño del logo */
   .navbar-collapse,
   .navbar-collapse.show {
-    padding-top: calc(var(--logo-mobile-size)) !important;
+    padding-top: calc(var(--logo-mobile-size) + 10px) !important;
   }
 
-  /* Neutralizar transformaciones heredadas de affix */
+  /* Neutralizar transforms del affix */
   .affix .logo-scroll,
   .affix .logo-normal {
-    transform: translateX(-50%) !important;
+    transform: none !important;
   }
 
   /* Logo dentro del botón hamburguesa */
   .toggler-logo {
     height: var(--logo-mobile-size) !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    transition: none !important;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent;
+    width: auto !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
   }
 
-  /* Botón hamburguesa */
+  /* Botón hamburguesa CENTRADO, con elementos en fila */
   .navbar-toggler {
     position: absolute !important;
     top: 10px !important;
-    right: 10px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important; /* Centra TODO el botón */
+
     z-index: 6000 !important;
+
     display: flex !important;
+    flex-direction: row !important; /* ← LOS PONE LADO A LADO */
+    justify-content: center !important;
     align-items: center !important;
-    gap: 8px !important;
-    background-color: transparent !important;
+    gap: 4px !important;
+
     padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
     border: none !important;
   }
-  /* Quitar borde blanco al hacer clic en el botón hamburguesa */
+
+  /* Quitar borde blanco al enfocar */
   .navbar-toggler:focus {
     outline: none !important;
     box-shadow: none !important;
+  }
+
+  /* Ajustar tamaño del icono hamburguesa sin afectar al logo */
+  .navbar-toggler .navbar-toggler-icon {
+    width: 30px !important;
+    height: 30px !important;
   }
 }
 
@@ -810,4 +823,5 @@ section[id] {
   display: flex;
   align-items: center;
   position: relative;
+  height: auto;
 }

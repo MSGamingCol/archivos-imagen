@@ -1,0 +1,106 @@
+/* ========================
+   CENTRADO DE SPONSORS
+   ======================== */
+.sponsor-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px; /* opcional para acercarlo al título */
+}
+
+/* Track de sponsors */
+.sponsor-track {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================
+   LOGOS
+   ======================== */
+.sponsor-track img {
+    height: 160px;
+    opacity: 0.95;
+    cursor: pointer;
+
+    /* Los más importantes para que funcione el hover */
+    transition: transform 0.25s ease-in-out !important;
+    transform: none !important;
+    will-change: transform !important;
+    pointer-events: auto !important;
+}
+
+/* ========================
+   HOVER — CRECE EL LOGO
+   ======================== */
+.sponsor-track a:hover img,
+.sponsor-track img:hover {
+    transform: scale(1.20) !important;
+    opacity: 1 !important;
+}
+
+/* ========================
+   RESPONSIVE
+   ======================== */
+@media (max-width: 768px) {
+    .sponsor-track {
+        gap: 25px;
+    }
+
+    .sponsor-track img {
+        height: 140px;
+    }
+}
+/* ======================================================
+   FORZAR HOVER EN LOGOS DE SPONSOR (DESKTOP)
+   Compatible con WOW.js, Bootstrap y animaciones
+   ====================================================== */
+
+/* Asegurar que los elementos reciban el hover */
+.sponsor-track a,
+.sponsor-track img {
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* Preparar la imagen para transformación */
+.sponsor-track img {
+    transition: transform 0.25s ease-in-out !important;
+    transform-origin: center center !important;
+    display: inline-block !important;
+    backface-visibility: hidden !important;
+}
+
+/* HOVER: crecer ligeramente en desktop */
+.sponsor-track a:hover img,
+.sponsor-track img:hover {
+    transform: scale(1.18) !important;
+}
+
+/* ========================
+   RESPONSIVE (NO HOVER)
+   ======================== */
+
+/* En móviles, el hover no aplica, 
+   pero esto asegura tamaños correctos */
+@media (max-width: 768px) {
+    .sponsor-track img {
+        height: 140px !important;
+        transform: none !important; /* quita animaciones en táctiles */
+    }
+}
+
+.sponsor-track img {
+    will-change: transform !important;
+    backface-visibility: hidden !important;
+    transform: translateZ(0) !important; /* Fix crítico */
+}
+
+/* Hover */
+.sponsor-track a:hover img,
+.sponsor-track img:hover {
+    transform: scale(1.18) translateZ(0) !important;
+}
