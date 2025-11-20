@@ -157,7 +157,14 @@ document.addEventListener('DOMContentLoaded', function () {
             modalTitle.textContent = this.dataset.title || "";
             modalDescription.textContent = this.dataset.desc || "";
             modalLogo.src = this.dataset.logo || "assets/imgs/logo-msg.png";
-
+            // Bandera SVG
+            const flagElement = document.getElementById('modalFlag');
+            if (this.dataset.flag) {
+                flagElement.src = this.dataset.flag;  // soporta .svg sin problema
+                flagElement.style.display = "block";
+            } else {
+                flagElement.style.display = "none";
+            }
             // LIMPIAR REDES
             modalSocial.innerHTML = "";
 
@@ -244,3 +251,4 @@ document.querySelectorAll(".menu-filter-btn").forEach(btn => {
         filtrarPorGrupo(grupo);
     });
 });
+
