@@ -368,7 +368,7 @@
                     data-title="MSG - Castrillón"
                     data-desc="EAFC 26"
                     data-logo="assets/imgs/logo-msg.png"
-                    data-video="assets/videos/fondo.mp4"
+                    data-video="assets/videos/castrillon.mp4"
                     data-flag="https://flagcdn.com/co.svg"
                     data-social='[
                         {"icon":"instagram","url":"https://instagram.com/jccastrillon_7"},
@@ -632,27 +632,63 @@
     </div>
 
 -->
-    <!-- book a table Section  -->
-    <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
-        <div class="">
-            <h2 class="section-title mb-5">FORMULARIO</h2>
+<!-- FORMULARIO -->
+<div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
+    <div>
+        <h2 class="section-title mb-5">FORMULARIO</h2>
+
+        <form id="contactForm">
             <div class="row mb-5">
+                
                 <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="email" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="EMAIL">
+                    <input 
+                        type="email" 
+                        name="email"
+                        class="form-control form-control-lg custom-form-control" 
+                        placeholder="EMAIL"
+                        required>
                 </div>
+
                 <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="text" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="NOMBRES" max="20" min="0">
+                    <input 
+                        type="text" 
+                        name="nombres"
+                        class="form-control form-control-lg custom-form-control" 
+                        placeholder="NOMBRE(S)"
+                        maxlength="20"
+                        required>
                 </div>
+
                 <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="text" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="APELLIDOS" max="20" min="0">
+                    <input 
+                        type="text" 
+                        name="apellidos"
+                        class="form-control form-control-lg custom-form-control" 
+                        placeholder="APELLIDOS"
+                        maxlength="20"
+                        required>
                 </div>
+
                 <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="text" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="MOTIVO" max="20" min="0">
+                    <input 
+                        type="text" 
+                        name="motivo"
+                        class="form-control form-control-lg custom-form-control" 
+                        placeholder="MOTIVO"
+                        maxlength="50"
+                        required>
                 </div>
+
             </div>
-            <a href="#" class="btn btn-lg btn-primary" id="rounded-btn">Enviar</a>
-        </div>
+
+            <button type="submit" class="btn btn-lg btn-primary" id="rounded-btn">Enviar</button>
+
+            <p id="formStatus" class="mt-3" style="display:none; color:#00ff80; font-weight:bold;">
+                ¡Mensaje enviado correctamente!
+            </p>
+        </form>
     </div>
+</div>
     <!-- CONTACT Section  -->
     <div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn">
         <div class="row">
@@ -756,5 +792,6 @@
     <!-- FoodHut js -->
     <script src="assets/js/msg.js"></script>
     <!-- script de filtrado (pega justo antes de cerrar </body> o reemplaza tu script existente) -->
+     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </body>
 </html>
