@@ -178,7 +178,7 @@ body {
   line-height: 1.5;
   color: #f8f9fa;
   text-align: left;
-  background-color: #343a40;
+  background-color: #000000;
 }
 
 [tabindex="-1"]:focus {
@@ -602,7 +602,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #343a40;
+  background-color: #000000;
   border: 1px solid #dee2e6;
   border-radius: 0.2rem;
   max-width: 100%;
@@ -2178,7 +2178,7 @@ pre code {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #343a40;
+  background-color: #000000;
   border-color: #454d55;
 }
 
@@ -2190,7 +2190,7 @@ pre code {
 
 .table-dark {
   color: #fff;
-  background-color: #343a40;
+  background-color: #000000;
 }
 
 .table-dark th,
@@ -2282,7 +2282,7 @@ pre code {
   color: #dee2e6;
   background-color: #495057;
   background-clip: padding-box;
-  border: 1px solid #343a40;
+  border: 1px solid #000000;
   border-radius: 0.2rem;
   -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3120,8 +3120,8 @@ fieldset:disabled a.btn {
 
 .btn-dark {
   color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .btn-dark:hover {
@@ -3136,8 +3136,8 @@ fieldset:disabled a.btn {
 
 .btn-dark.disabled, .btn-dark:disabled {
   color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active,
@@ -3377,14 +3377,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-dark {
-  color: #343a40;
-  border-color: #343a40;
+  color: #000000;
+  border-color: #000000;
 }
 
 .btn-outline-dark:hover {
   color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .btn-outline-dark:focus, .btn-outline-dark.focus {
@@ -3392,15 +3392,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-dark.disabled, .btn-outline-dark:disabled {
-  color: #343a40;
+  color: #000000;
   background-color: transparent;
 }
 
 .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active,
 .show > .btn-outline-dark.dropdown-toggle {
   color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
@@ -4028,7 +4028,7 @@ input[type="button"].btn-block {
   text-align: center;
   white-space: nowrap;
   background-color: #eaf0fc;
-  border: 1px solid #343a40;
+  border: 1px solid #000000;
   border-radius: 0.2rem;
 }
 
@@ -4266,7 +4266,7 @@ input[type="button"].btn-block {
   vertical-align: middle;
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.78rem center/8px 10px;
   background-color: #495057;
-  border: 1px solid #343a40;
+  border: 1px solid #000000;
   border-radius: 0.2rem;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -4361,7 +4361,7 @@ input[type="button"].btn-block {
   line-height: 1.5;
   color: #dee2e6;
   background-color: #495057;
-  border: 1px solid #343a40;
+  border: 1px solid #000000;
   border-radius: 0.2rem;
 }
 
@@ -4397,15 +4397,15 @@ input[type="button"].btn-block {
 }
 
 .custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #343a40, 0 0 0 0.2rem rgba(255, 33, 79, 0.25);
+  box-shadow: 0 0 0 1px #000000, 0 0 0 0.2rem rgba(255, 33, 79, 0.25);
 }
 
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #343a40, 0 0 0 0.2rem rgba(255, 33, 79, 0.25);
+  box-shadow: 0 0 0 1px #000000, 0 0 0 0.2rem rgba(255, 33, 79, 0.25);
 }
 
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #343a40, 0 0 0 0.2rem rgba(255, 33, 79, 0.25);
+  box-shadow: 0 0 0 1px #000000, 0 0 0 0.2rem rgba(255, 33, 79, 0.25);
 }
 
 .custom-range::-moz-focus-outer {
@@ -4616,8 +4616,8 @@ input[type="button"].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #343a40;
-  border-color: #dee2e6 #dee2e6 #343a40;
+  background-color: #000;
+  border-color: #dee2e6 #dee2e6 #000000;
 }
 
 .nav-tabs .dropdown-menu {
@@ -5000,7 +5000,7 @@ input[type="button"].btn-block {
   margin-left: -1px;
   line-height: 1.25;
   color: #fff;
-  background-color: #343a40;
+  background-color: #000000;
   border: 1px solid #495057;
 }
 
@@ -5223,7 +5223,7 @@ a.badge-light:focus, a.badge-light.focus {
 
 .badge-dark {
   color: #fff;
-  background-color: #343a40;
+  background-color: #000;
 }
 
 a.badge-dark:hover, a.badge-dark:focus {
@@ -6572,7 +6572,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #000 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -6658,7 +6658,7 @@ button.bg-dark:focus {
 }
 
 .border-dark {
-  border-color: #343a40 !important;
+  border-color: #000 !important;
 }
 
 .border-white {
@@ -10193,7 +10193,7 @@ a.text-light:hover, a.text-light:focus {
 }
 
 .text-dark {
-  color: #343a40 !important;
+  color: #000 !important;
 }
 
 a.text-dark:hover, a.text-dark:focus {
@@ -10336,7 +10336,7 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #f8f9fa;
-  background: #343a40;
+  background: #000;
   box-sizing: border-box;
 }
 
@@ -10387,7 +10387,7 @@ table, tr, td, th {
   -webkit-transform: rotate(45deg) translateX(-50%);
       -ms-transform: rotate(45deg) translateX(-50%);
           transform: rotate(45deg) translateX(-50%);
-  background: #343a40;
+  background: #000;
 }
 
 pre {
@@ -10466,7 +10466,7 @@ pre {
   font-size: 2.4rem;
   font-weight: bold;
   opacity: .8;
-  color: #343a40;
+  color: #000;
 }
 
 .header-mini {
@@ -10527,7 +10527,7 @@ pre {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #343a40;
+  background: #000;
   z-index: -2;
 }
 
@@ -10574,7 +10574,7 @@ pre {
 
 .gallary .gallary-item {
   padding: 0;
-  border: 1px solid #343a40;
+  border: 1px solid #000;
 }
 
 .gallary .gallary-item .gallary-img {
