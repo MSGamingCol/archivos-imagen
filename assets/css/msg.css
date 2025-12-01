@@ -10639,3 +10639,11 @@ pre {
 [id] {
     scroll-margin-top: 120px !important;
 }
+/* ================================
+   FIX: Mantener la misma fuente en móvil
+================================ */
+@media (max-width: 991px) {
+    body, h1, h2, h3, h4, h5, h6, p, a, span, div {
+        font-family: 'Poppins', sans-serif !important;
+    }
+}
