@@ -188,6 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     case "twitter": iconSVG = "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg"; break;
                     case "youtube": iconSVG = "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg"; break;
                     case "tiktok": iconSVG = "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg"; break;
+                    case "discord": iconSVG = "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/discord.svg"; break;
                 }
 
                 link.innerHTML = `<img src="${iconSVG}" width="28" style="filter:invert(1)">`;
